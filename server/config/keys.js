@@ -1,3 +1,5 @@
+const dotenv = require("dotenv");
+dotenv.config({path:"../sample.env"});
 module.exports = {
   app: {
     name: 'Mern Ecommerce',

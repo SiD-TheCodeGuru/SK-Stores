@@ -137,27 +137,7 @@ class Navigation extends React.PureComponent {
 
     return (
       <header className='header fixed-mobile-header'>
-        <div className='header-info'>
-          <Container>
-            <Row>
-              <Col md='4' className='text-center d-none d-md-block'>
-                <i className='fa fa-truck' />
-                <span>Free Shipping</span>
-              </Col>
-              <Col md='4' className='text-center d-none d-md-block'>
-                <i className='fa fa-credit-card' />
-                <span>Payment Methods</span>
-              </Col>
-              <Col md='4' className='text-center d-none d-md-block'>
-                <i className='fa fa-phone' />
-                <span>Call us 951-999-9999</span>
-              </Col>
-              <Col xs='12' className='text-center d-block d-md-none'>
-                <i className='fa fa-phone' />
-                <span> Need advice? Call us 951-999-9999</span>
-              </Col>
-            </Row>
-          </Container>
+        <div>
         </div>
         <Container>
           <Row className='align-items-center top-header'>
@@ -179,7 +159,7 @@ class Navigation extends React.PureComponent {
                   />
                 )}
                 <Link to='/'>
-                  <h1 className='logo'>MERN Store</h1>
+                  <h1 className='logo'>Sk Stores</h1>
                 </Link>
               </div>
             </Col>
@@ -228,6 +208,7 @@ class Navigation extends React.PureComponent {
               // className='px-0'
             >
               <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
+                Cart    
                 <CartIcon
                   className='d-none d-md-block'
                   cartItems={cartItems}
@@ -276,7 +257,20 @@ class Navigation extends React.PureComponent {
                         >
                           Dashboard
                         </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
+                        <DropdownItem onClick={signOut}>
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</DropdownItem>
+                        <DropdownItem>
+                          <i className='fa fa-truck' />
+                          <span>No Charge Shipping</span>
+                        </DropdownItem>
+                        <DropdownItem>
+                          <i className='fa fa-credit-card' />
+                          <span>Payment Options</span>
+                        </DropdownItem>
+                        <DropdownItem>
+                          <i className='fa fa-phone' />
+                          <span>Call us +91 - XXXXXXXXX</span>
+                        </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   ) : (
@@ -287,10 +281,22 @@ class Navigation extends React.PureComponent {
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem onClick={() => history.push('/login')}>
-                          Login
+                        <i class="fa fa-sign-in" aria-hidden="true"></i> Sign In
                         </DropdownItem>
                         <DropdownItem onClick={() => history.push('/register')}>
-                          Sign Up
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>Sign Up
+                        </DropdownItem>
+                        <DropdownItem>
+                          <i className='fa fa-truck' />
+                          <span>No Charge Shipping</span>
+                        </DropdownItem>
+                        <DropdownItem>
+                          <i className='fa fa-credit-card' />
+                          <span>Payment Options</span>
+                        </DropdownItem>
+                        <DropdownItem>
+                          <i className='fa fa-phone' />
+                          <span>Call us +91 - XXXXXXXXX</span>
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>

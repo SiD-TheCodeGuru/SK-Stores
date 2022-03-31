@@ -1,9 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const CURRENT_WORKING_DIR = process.cwd();
-
+console.log(process.cwd())
 const PORT = process.env.PORT;
 
 module.exports = {

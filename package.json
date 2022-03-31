@@ -1,17 +1,21 @@
 {
-  "name": "mern-ecommerce",
+  "name": "sk-stores",
   "version": "1.0.0",
-  "description": "MERN Ecommerce",
+  "description": "SK  Stores",
   "main": "server/index.js",
   "scripts": {
     "build": "npm run build:clean && cross-env NODE_ENV=production webpack --progress --colors",
     "build:clean": "rimraf ./dist",
-    "start": "cross-env NODE_ENV=development nodemon server",
+    "start": "node server.js",
     "start:production": "cross-env NODE_ENV=production node server",
     "production": "npm run build",
     "postinstall": "npm run build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "14.17.5"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mohamedsamara/mern-ecommerce.git"

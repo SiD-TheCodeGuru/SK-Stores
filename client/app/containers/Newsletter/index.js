@@ -23,7 +23,7 @@ class Newsletter extends React.PureComponent {
     } = this.props;
 
     const SubscribeButton = (
-      <Button type='submit' variant='primary' text='Subscribe' />
+      <Button type='submit' variant='primary' text='Sign Up' />
     );
 
     const handleSubmit = event => {
@@ -33,7 +33,7 @@ class Newsletter extends React.PureComponent {
 
     return (
       <div className='newsletter-form'>
-        <p>Sign Up for Our Newsletter</p>
+        <p>Sign Up for Our Newsletter & get updated on every moment.</p>
         <form onSubmit={handleSubmit}>
           <div className='subscribe'>
             <Input

@@ -8,7 +8,7 @@ const options = {
   truncate: 120
 };
 
-Mongoose.plugin(slug, options);
+ Mongoose.plugin(slug, options);
 
 // Product Schema
 const ProductSchema = new Schema({

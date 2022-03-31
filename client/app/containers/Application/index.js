@@ -78,20 +78,11 @@ class Application extends React.PureComponent {
                 <Route path='/order/:id' component={OrderPage} />
                 <Route path='/login' component={Login} />
                 <Route path='/register' component={Signup} />
-                <Route
-                  path='/merchant-signup/:token'
-                  component={MerchantSignup}
-                />
-                <Route path='/forgot-password' component={ForgotPassword} />
-                <Route
-                  path='/reset-password/:token'
-                  component={ResetPassword}
-                />
+                <Route path='/merchant-signup/:token' component={MerchantSignup} />
+                <Route path='/forgot-password' component={ForgotPassword} /> 
+                <Route path='/reset-password/:token' component={ResetPassword} />
                 <Route path='/auth/success' component={AuthSuccess} />
-                <Route
-                  path='/dashboard'
-                  component={Authentication(Dashboard)}
-                />
+                <Route path='/dashboard' component={Authentication(Dashboard)} />
                 <Route path='/404' component={Page404} />
                 <Route path='*' component={Page404} />
               </Switch>

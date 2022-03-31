@@ -15,7 +15,6 @@ const keys = require('./config/keys');
 const webpackConfig = require('../webpack.config');
 const routes = require('./routes');
 const socket = require('./socket');
-
 const { database, port } = keys;
 const app = express();
 

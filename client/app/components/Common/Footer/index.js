@@ -12,7 +12,12 @@ import { Container } from 'reactstrap';
 import Newsletter from '../../../containers/Newsletter';
 
 const Footer = () => {
-  const infoLinks = [
+  const infoLink1 = [
+    { id: 0, name: 'Merchents', to: '/contact' },
+    { id: 1, name: 'Online Stores', to: '/sell' },
+    { id: 2, name: 'Shipping', to: '/shipping' }
+  ];
+  const infoLink2 = [
     { id: 0, name: 'Contact Us', to: '/contact' },
     { id: 1, name: 'Sell With Us', to: '/sell' },
     { id: 2, name: 'Shipping', to: '/shipping' }
@@ -29,7 +34,14 @@ const Footer = () => {
     </ul>
   );
 
-  const footerLinks = infoLinks.map(item => (
+  const footerLinks1 = infoLink1.map(item => (
+    <li key={item.id} className='footer-link'>
+      <Link key={item.id} to={item.to}>
+        {item.name}
+      </Link>
+    </li>
+  ));
+  const footerLinks2 = infoLink2.map(item => (
     <li key={item.id} className='footer-link'>
       <Link key={item.id} to={item.to}>
         {item.name}
@@ -43,18 +55,18 @@ const Footer = () => {
         <div className='footer-content'>
           <div className='footer-block'>
             <div className='block-title'>
-              <h2>Customer Service</h2>
+              <h2>Services</h2>
             </div>
             <div className='block-content'>
-              <ul>{footerLinks}</ul>
+              <ul>{footerLinks1}</ul>
             </div>
           </div>
           <div className='footer-block'>
             <div className='block-title'>
-              <h2>Links</h2>
+              <h2>Quick Links</h2>
             </div>
             <div className='block-content'>
-              <ul>{footerLinks}</ul>
+              <ul>{footerLinks2}</ul>
             </div>
           </div>
           <div className='footer-block'>
@@ -65,7 +77,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='footer-copyright'>
-          <span>© {new Date().getFullYear()} MERN Store</span>
+          <span>© {new Date().getFullYear()} SK Stores</span>
         </div>
         <ul className='footer-social-item'>
           <li>
@@ -76,11 +88,6 @@ const Footer = () => {
           <li>
             <a href='/#instagram' rel='noreferrer noopener' target='_blank'>
               <span className='instagram-icon' />
-            </a>
-          </li>
-          <li>
-            <a href='/#pinterest' rel='noreferrer noopener' target='_blank'>
-              <span className='pinterest-icon' />
             </a>
           </li>
           <li>
