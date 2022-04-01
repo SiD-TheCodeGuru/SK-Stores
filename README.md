@@ -2,7 +2,7 @@
 
 * Operations are divided into 3 categories:
  1. Admin: Administration over the app.
- 2. Merchent: As seller of different products or items.
+ 2. Merchant: As seller of different products or items.
  3. Customer: Are the Buyers. 
 
 # Technologies used
